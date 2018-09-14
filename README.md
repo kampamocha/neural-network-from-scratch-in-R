@@ -31,10 +31,7 @@ So, this is equivalent to the dot product between the input vector ![](http://la
 ``` r
 dot_prod = function(a, b){
   stopifnot( is.numeric(a) & is.numeric(b) & length(a) == length(b) )
-  ab = 0
-  for( i in seq(from = 1, to = length(a)) ){
-    ab = ab + (a[i] * b[i])
-  }
+  ab = sum(a*b)
   return(ab)
 }
 dot_prod(a = c(0,1), b = c(1,0))
